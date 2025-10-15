@@ -1,42 +1,6 @@
 ---
 share: true
 ---
-<!-- Table of Contents -->
-# Table of Contents
-1. [[Notes_BashScript# Day 1:|Day 1:]]
-	1. [[Notes_BashScript## ### local variable|### local variable]]
-		1. [[Notes_BashScript### local variable|local variable]]
-		2. [[Notes_BashScript### environmental variable|environmental variable]]
-		3. [[Notes_BashScript### for making alias|for making alias]]
-		4. [[Notes_BashScript### Command Substitution|Command Substitution]]
-		5. [[Notes_BashScript### Print the sum|Print the sum]]
-		6. [[Notes_BashScript### Redefine variables|Redefine variables]]
-	2. [[Notes_BashScript## Steps To Create and Run Bash Script Code.|Steps To Create and Run Bash Script Code.]]
-	3. [[Notes_BashScript## Task  Day 1|Task  Day 1]]
-		1. [[Notes_BashScript### Task 1|Task 1]]
-2. [[Notes_BashScript# Day 2|Day 2]]
-	1. [[Notes_BashScript## Cut|Cut]]
-3. [[Notes_BashScript# |]]
-	1. [[Notes_BashScript## Sed|Sed]]
-	2. [[Notes_BashScript## AWK|AWK]]
-	3. [[Notes_BashScript## Sort |Sort ]]
-	4. [[Notes_BashScript## If Condition|If Condition]]
-	5. [[Notes_BashScript## Case|Case]]
-	6. [[Notes_BashScript## Select Loop|Select Loop]]
-	7. [[Notes_BashScript## Tasks Day 2|Tasks Day 2]]
-		1. [[Notes_BashScript### Task 2|Task 2]]
-		2. [[Notes_BashScript### Task 3|Task 3]]
-4. [[Notes_BashScript# Day 3|Day 3]]
-	1. [[Notes_BashScript## While Loop:|While Loop:]]
-	2. [[Notes_BashScript## Until Loop|Until Loop]]
-	3. [[Notes_BashScript## For|For]]
-	4. [[Notes_BashScript## Tasks Day 3|Tasks Day 3]]
-		1. [[Notes_BashScript### Task 4 |Task 4 ]]
-
-<!-- End of TOC -->
-
-
-
 
 
 # Day 1:
