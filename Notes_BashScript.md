@@ -1,16 +1,3 @@
----
-share: true
----
-
-
-```toc
-```
-
-
-
-
-
-
 # Day 1:
 
 ### local variable
