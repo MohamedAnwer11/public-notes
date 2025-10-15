@@ -1,11 +1,39 @@
 ---
 share: true
 ---
+<!-- Table of Contents -->
+# Table of Contents
+1. [[Notes_BashScript# Day 1:|Day 1:]]
+	1. [[Notes_BashScript## ### local variable|### local variable]]
+		1. [[Notes_BashScript### local variable|local variable]]
+		2. [[Notes_BashScript### environmental variable|environmental variable]]
+		3. [[Notes_BashScript### for making alias|for making alias]]
+		4. [[Notes_BashScript### Command Substitution|Command Substitution]]
+		5. [[Notes_BashScript### Print the sum|Print the sum]]
+		6. [[Notes_BashScript### Redefine variables|Redefine variables]]
+	2. [[Notes_BashScript## Steps To Create and Run Bash Script Code.|Steps To Create and Run Bash Script Code.]]
+	3. [[Notes_BashScript## Task  Day 1|Task  Day 1]]
+		1. [[Notes_BashScript### Task 1|Task 1]]
+2. [[Notes_BashScript# Day 2|Day 2]]
+	1. [[Notes_BashScript## Cut|Cut]]
+3. [[Notes_BashScript# |]]
+	1. [[Notes_BashScript## Sed|Sed]]
+	2. [[Notes_BashScript## AWK|AWK]]
+	3. [[Notes_BashScript## Sort |Sort ]]
+	4. [[Notes_BashScript## If Condition|If Condition]]
+	5. [[Notes_BashScript## Case|Case]]
+	6. [[Notes_BashScript## Select Loop|Select Loop]]
+	7. [[Notes_BashScript## Tasks Day 2|Tasks Day 2]]
+		1. [[Notes_BashScript### Task 2|Task 2]]
+		2. [[Notes_BashScript### Task 3|Task 3]]
+4. [[Notes_BashScript# Day 3|Day 3]]
+	1. [[Notes_BashScript## While Loop:|While Loop:]]
+	2. [[Notes_BashScript## Until Loop|Until Loop]]
+	3. [[Notes_BashScript## For|For]]
+	4. [[Notes_BashScript## Tasks Day 3|Tasks Day 3]]
+		1. [[Notes_BashScript### Task 4 |Task 4 ]]
 
-```table-of-contents
-```
-
-
+<!-- End of TOC -->
 
 
 
@@ -14,6 +42,7 @@ share: true
 # Day 1:
 
 ### local variable
+
 commands:
 	From terminal
 	name=tester
@@ -21,6 +50,7 @@ commands:
 	echo "My Name is $name, I'm from $country."
 
 ### environmental variable
+
 command:
 	echo $SHELL
 	echo $HOME
@@ -28,6 +58,7 @@ command:
 	echo $PATH
 
 ### for making alias
+
 Command
 	`alias 1="ls -la"`
 	when you press 1 you default make the ls -la
@@ -38,6 +69,7 @@ In the same terminal to delete the alias from the terminal
 	and this can not shown with the journal --since 10:00
 
 ### Command Substitution
+
 Command:
 	`echo date`
 	`echo "Today is date"`
@@ -45,11 +77,13 @@ Command:
 	`echo "Today is $(date)"`    ===   `echo "Today is `date`"`
 
 ### Print the sum
+
 Command:
 	`echo "The SUM of 1 & 2 is $((1+2))"`
 	`echo "The SUM of 1 & 2 is $[1+2]"`
 
-### Redefine variables:
+### Redefine variables
+
 Command:
 	`root@root:~ $0 $1 $2 $3`
 Example:
@@ -85,10 +119,10 @@ Example: Make backup for any file to any place
 ```bash
 #!/bin/bash
 
-#tar [-option] Desctinitation Source
+ #tar [-option] Desctinitation Source
 tar -cf /root/bacup_test.tar /home/user
 
-# script can more realabile
+ # script can more realabile
 tar -cf /home/user/Desktop/backup$(date +%F).tar /home/user/Desktop/Task1.txt
 ```
 
@@ -150,7 +184,7 @@ cut -d ":" -f 1,2 /etc/passwd
 ```
 
 ```txt
-# sed command filename
+  # sed command filename
 Sed :
 	Options: [p for Print],[g for Global],[d for Delete],[s for Silent],[-e for Regular Expression] [n Quit mode]
 ```
@@ -171,24 +205,24 @@ ali,ibramhim,aliibrahim@gmail.com
 Example: Sed
 ```Bash
 sed -n '/Ahmed/p' names.csv
-# sed -n '/Ahmed/amer/p' names.csv
+  # sed -n '/Ahmed/amer/p' names.csv
 
-# get from 2-4 with use , with the name 
+  # get from 2-4 with use , with the name 
 sed -n '/Yasmin/,/hambola/p' names.csv
 sed -n '2,/hambola/p' names.csv
 
-# Replacing  [`g` for global]
+  # Replacing  [`g` for global]
 sed 's/Ahmed/Hassan/g' names.csv
 
-# Delete from logs
+  # Delete from logs
 sed '4d' names.csv
-# delete From line 4 to the end
+  # delete From line 4 to the end
 sed '4,$d' names.csv
 
-# Delete Line that has the name 'Ahmed'
+  # Delete Line that has the name 'Ahmed'
 sed '/Ahmed/d' names.csv
 
-# Delte the fourth line (-e Regular Expresstion) and Replace Ahmed with Hossam
+  # Delte the fourth line (-e Regular Expresstion) and Replace Ahmed with Hossam
 sed -e '4d' -e 's/Ahmed/Hossam/g' names.csv 
 ```
 
@@ -205,36 +239,36 @@ sed -e '4d' -e 's/Ahmed/Hossam/g' names.csv
 ```
 Example: AWK
 ```Bash
-# awk -F [field]
+  # awk -F [field]
 
-# Get all entire record
+  # Get all entire record
 awk -F : '{print $0}' /etc/passwd
 cat -n /etc/passwd
 
-# print first record.
+  # print first record.
 awk -F : '{print $1}' /etc/passwd
-# print secons record.
+  # print secons record.
 awk -F : '{print $2}' /etc/passwd
-# print third record.
+ # print third record.
 awk -F : '{print $3}' /etc/passwd
 
-# Get first record the first column first.
+ # Get first record the first column first.
 awk -F : 'NR==1{print $1}' /etc/passwd
 
-# print the number in the first and print the records
+  # print the number in the first and print the records
 awk -F : '{print NR,$0}' /etc/passwd
 
-# Number it and print the Range from 45 <= NR >= 50
+ # Number it and print the Range from 45 <= NR >= 50
 awk -F : 'NR>=45&&NR>=13{print $0}' /etc/passwd
 awk -F : 'NR>=45&&NR>=13{print $1}' /etc/passwd
-# you can do this with the 
+ # you can do this with the 
 awk -F : 'NR==45,NR==13{print $0}' /etc/passwd
 awk -F : 'NR==45,NR==13{print $1}' /etc/passwd
 
-# To run the single column 
+ # To run the single column 
 awk -F : 'NR==45||NR==13{print $0}' /etc/passwd
 
-# Print Number of Fileds for the Record
+ # Print Number of Fileds for the Record
 awk -F : '{print NF,$0}' /etc/passwd
 awk -F : '{print NF}' /etc/passwd
 ```
@@ -255,7 +289,7 @@ Example: Sort
 ```Bash
 sort names.csv
 sort -r names.csv # -r for reverse
-# sort -determinate seberate with : -k for the Kth column 3 with number
+ # sort -determinate seberate with : -k for the Kth column 3 with number
 sort -t : -k 3n /etc/passwd # 
 
 ```
@@ -574,56 +608,56 @@ done
 ```
 Example: For
 ```Bash
-#!/bin/bash
+  #!/bin/bash
 
 for var_name in 1 2 3 4 5
 do 
 	echo $var_name
 done 
 
-######## 
+
 
 for var_name in {1..5}
 do 
 	echo $var_name
 done
 
-########
+
 
 for var_name in `seq 1 5`
 do 
 	echo $var_name
 done
 
-########
+
 
 for ip in `seq 1 254`
 do
 	ping -c 1 $1.$ip
 done
 
-########
+
 
 for ip in `seq 1 254`
 do
 	ping -c 1 $1.$ip | grep "64 bytes"
 done
 
-########
+
 
 for ip in `seq 1 254`
 do
 	ping -c 1 $1.$ip | grep "64 bytes" |cut -d " " -f 4
 done
 
-########
+
 
 for ip in `seq 1 254`
 do
 	ping -c 1 $1.$ip | grep "64 bytes" |cut -d " " -f 4 | tr -d ":"
 done
 
-########
+
 
 for ip in `seq 1 254`
 do
@@ -702,4 +736,3 @@ done
 
 ---
 ---
-
