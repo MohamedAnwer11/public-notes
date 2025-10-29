@@ -37,22 +37,28 @@ In the same terminal to delete the alias from the terminal
 
 Command:
 	`echo date`
+	
 	`echo "Today is date"`
+	
 	`echo "Today is $date"`
+	
 	`echo "Today is $(date)"`    ===   `echo "Today is `date`"`
 
 ### Print the sum
 
 Command:
 	`echo "The SUM of 1 & 2 is $((1+2))"`
+	
 	`echo "The SUM of 1 & 2 is $[1+2]"`
 
 ### Redefine variables
 
 Command:
 	`root@root:~ $0 $1 $2 $3`
+	
 Example:
 	`root@root:~ sudo apt install thing`
+	
 	`root@root:~ $0    $1   $3     $4  `
 
 ---
