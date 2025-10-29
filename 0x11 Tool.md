@@ -4,6 +4,8 @@ share: true
 ```Bash
 #!/bin/bash
 
+# 0x11 Tool
+
 Installing() {
     local cmd="$1" pkg="$2"
     if ! command -v "$cmd" >/dev/null 2>&1; then
