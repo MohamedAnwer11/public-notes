@@ -1,6 +1,16 @@
 ---
 share: true
 ---
+### Installing
+- Copy This code and put this with anyfile eg `Hambola.sh`. 😂
+
+### Usage
+-  cd ~/Hambola.sh
+- chmod +x Hambola.sh
+- ./Hambola.sh
+
+### Code
+
 ```Bash
 #!/bin/bash
 
